@@ -1,0 +1,40 @@
+R_presentation
+========================================================
+author: Vinsent
+date: 6/16/2015
+
+First Slide on dataset wine from kohonen package
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
+# explore the wine dataset
+```{r}
+data(wines, package = "kohonen")
+wines.dist <- dist(scale(wines))
+head(wines.dist)
+colnames(wines.dist)
+```
+
+
+
+Slide With histogram
+========================================================
+
+```{r}
+plot.new()
+hist(wines.dist)
+```
+
+Slide With scatter Plot
+========================================================
+
+```{r, echo=FALSE}
+plot.new()
+plot(wines.dist)
+```
+
+Slide With Reference
+========================================================
+
+http://cran.r-project.org/web/packages/ChemometricsWithR/ChemometricsWithR.pdf
